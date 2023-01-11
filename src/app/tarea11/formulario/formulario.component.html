@@ -1,0 +1,29 @@
+<h1 style="text-align: center;">Formulario</h1>
+<section class="container-sm">
+    <form [formGroup]="formLogin" (submit)="send()">
+        <section class="form-group">
+            <label for="nombre">Nombre :</label>
+            <input class="form-control" type="text" 
+            name="nombre" formControlName="nombre">
+        </section>
+        <section class="form-group">
+            <label for="email">Email :</label>
+            <input class="form-control" type="text" name="email" 
+            formControlName="email">
+        </section>
+        <section class="form-group">
+            <label for="mensaje">Mensaje :</label>
+            <textarea class="form-control" name="mensaje" 
+            id="" cols="30" rows="10"
+            formControlName="mensaje"></textarea>
+        </section>
+        <section class="form-group">
+            <button class="btn btn-danger" style="margin-top: 5px;" type="submit" 
+            [disabled]="formLogin.invalid" >Enviar</button>
+        </section>
+    </form>
+    <p *ngIf="formLogin.valid">Los datos son validos</p>
+</section>
+<section>
+    
+</section>
